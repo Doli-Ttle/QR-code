@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qvault || DoliTtle</title>
+    <link rel="shortcut icon" href="asset/Qvault2.png" type="image/svg+xml">
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/bgStyle.css">
+    <link rel="stylesheet" href="Style/popStyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=photo_camera" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+</head>
+<body>
+    <div class="Animated-bg">
+        <nav class="sticker">
+            <div class="header">
+                <p> Get a QR Scan for your Business</p>
+            </div>
+            <div class="name">
+                <h1>Qvault</h1>
+                <!-- <img src="asset/Qvault2.png" alt=""> -->
+            </div> 
+        </nav>
+        
+
+        <div class="context">
+            <div class="container">
+                <div class="setting">
+                    <div class="input-wrap">
+                        <label for="data">Data</label>
+                        <textarea id="data" class="input-1x">https://codepen.io/Yonnilight</textarea>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="size">Size</label>
+                        <input type="range" id="size" min="10" max="30" value="1" class="input-1x">
+                    </div>
+                    <div class="input-wrap">
+                        <label for="logo">Logo</label>
+                        <input type="file" id="logo" hidden>
+                        <div class="input-2x">
+                            <a href="javascript:browse();">
+                                <!-- <i class="fa-regular fa-camera"></i> -->
+                                <span class="material-symbols-outlined">photo_camera</span></a>
+                        </div>
+                        <div class="input-2x">
+                            <button id="clear" type="button">clear</button>
+                        </div>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="margin">Margin</label>
+                        <input type="range" id="margin" value="0" min="1" max="30" value="1" class="input-1x">
+                    </div>
+
+                    
+                    <div class="input-wrap">
+                        <label for="dot">Dot Mode</label>
+                        <select id="dot" class="input-1x">
+                            <option value="square">Square</option>
+                            <option value="dot">Dotted</option>
+                            <option value="rounded">Rounded</option>
+                            <option value="extra-rounded">Extra Rounded</option>
+                            <option value="classy">Classy</option>
+                            <option value="classy-rounded">Classy Rounded</option>
+                        </select>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="dot-color">Dot Color</label>
+                        <input type="color" id="dot-color-1" class="input-2x">
+                        <input type="color" id="dot-color-2" class="input-2x">
+                    </div>
+                    <div class="input-wrap">
+                        <label for="bg-color">BG Color</label>
+                        <input type="color" id="bg-color" class="input-1x">
+                    </div>
+
+                </div>
+
+                <div class="display">
+                    <div id="canvas"></div>
+                    <p>300px x 300px</p>
+                    <!-- <button class="btn-download" id="btn-dl" type="button">Download</button> -->
+                        <button class="show-modal">Show Modal</button>
+                        <span class="overlay"></span>
+
+                        <div class="modal-box">
+                            <i class="fa-regular fa-circle-check"></i>
+                            <h2>Amazing Right?</h2>
+                            <h3>Click the Follow Button to Show Support.</h3>
+
+                            <div class="buttons">
+                            <button class="btn-download" id="btn-dl" type="button">Download</button>
+                            <button class="close-btn">Follow</button>
+
+                            </div>
+                        </div>
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+
+         
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <section class="about-container wrapper flex">
+            <div class="about wrapper text-center mt-4">
+                <span class="text first-text">
+                    Generate & Scan QR-Codes for your</span>
+                <span class="text sec-text">Social Media Handles</span>
+            </div>
+            <!-- =================== -->
+            <div class="cards-wrapper">
+              <div class="card-grid-space">
+                <div class="num">01</div>
+                <a class="card" href="#"
+                  style="--bg-img: url(/asset/blog1.jpg)">
+                                    <!-- style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)" -->
+
+                  <div>
+                    <h1>Corporate & Internal</h1>
+                    <p>Place codes on "We’re Hiring" posters that link directly to the application portal…</p>
+                    <div class="date">6 Oct 2017</div>
+                    <div class="tags">
+                      <div class="tag">HTML</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="card-grid-space">
+                <div class="num">02</div>
+                <a class="card" href="#"
+                  style="--bg-img: url(/asset/blog2.jpg)">
+                  <div>
+                    <h1>Retail & Service</h1>
+                    <p>Don’t just put a code on a table; add a call-to-action (CTA)…</p>
+                    <div class="date">9 Oct 2017</div>
+                    <div class="tags">
+                      <div class="tag">HTML</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="card-grid-space">
+                <div class="num">03</div>
+                <a class="card" href="#"
+                  style="--bg-img: url(/asset/blog4.jpg)">
+                  <div>
+                    <h1>For Social Media Growth</h1>
+                    <p>Display a "Scan to Follow". People are much more likely to scan than to type in a username…</p>
+                    <div class="date">14 Oct 2017</div>
+                    <div class="tags">
+                      <div class="tag">HTML</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- https://images.unsplash.com/photo-1520839090488-4a6c211e2f94?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38951b8650067840307cba514b554ba5&auto=format&fit=crop&w=1350&q=80 -->
+            </div>
+        </section>
+
+         <section class="companies mt-4">
+        <!-- Heading -->
+<h1 class="section-heading">Trusted By The Best</h1>
+<p class="section-subtitle">Our team has been trusted with thousands of events for the world's best companies, big or small.</p>
+<!-- rc-carousel wrapper, set total tiles count including duplicate items -->
+<div class="rc-carousel" style="--tiles: 18;">
+  <!-- rc-carousel-strip animation -->
+  <div class="rc-carousel-strip">
+    <!-- Flexbox -->
+    <div class="rc-carousel-box">
+      <!-- Items start -->
+      <div class="rc-carousel-item">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/df6a77389d/dhl-with-white-bg.svg" alt="dhl" />
+      </div>
+      <div class="rc-carousel-item">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/b3ddb46ffd/fedex.svg" alt="fedex" />
+      </div>
+      <div class="rc-carousel-item">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/13b7cfbff0/ups.svg" alt="ups" />
+      </div>
+      <div class="rc-carousel-item">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/bed370f7c7/upsp.svg" alt="upsp" />
+      </div>
+      <div class="rc-carousel-item">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/3d19ae9058/ems.svg" alt="ems" />
+      </div>
+      <div class="rc-carousel-item">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/0a2ea7112b/dpd.svg" alt="dpd" />
+      </div>
+      <div class="rc-carousel-item">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/fe62ffeb3c/gls.svg" alt="gls" />
+      </div>
+      <div class="rc-carousel-item">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/863af19f44/auspost.svg" alt="auspost" />
+      </div>
+      <div class="rc-carousel-item">
+        <!-- <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/b546bbfc89/dsv.svg" alt="dsv" /> -->
+        <img class="rc-carousel-item-image"  src="asset/BackgroundEraser_20251001_110745404.png" alt="">
+      </div>
+      <!-- Items end -->
+
+      <!-- Duplicate items start, for infinite loop -->
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/df6a77389d/dhl-with-white-bg.svg" alt="dhl" />
+      </div>
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/b3ddb46ffd/fedex.svg" alt="fedex" />
+      </div>
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/13b7cfbff0/ups.svg" alt="ups" />
+      </div>
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/bed370f7c7/upsp.svg" alt="upsp" />
+      </div>
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/3d19ae9058/ems.svg" alt="ems" />
+      </div>
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/0a2ea7112b/dpd.svg" alt="dpd" />
+      </div>
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/fe62ffeb3c/gls.svg" alt="gls" />
+      </div>
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/863af19f44/auspost.svg" alt="auspost" />
+      </div>
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/b546bbfc89/dsv.svg" alt="dsv" />
+      </div>
+      <!-- Duplicate items end -->
+    </div>
+    <!-- Flexbox ends -->
+  </div>
+  <!-- rc-carousel-strip ends -->
+</div>
+<!-- rc-carousel wrapper ends -->
+
+<!-- rc-carousel wrapper, set total tiles count including duplicate items -->
+<div class="rc-carousel" style="--tiles: 18">
+  <!-- rc-carousel-strip animation -->
+  <div class="rc-carousel-strip reverse">
+    <!-- Flexbox -->
+    <div class="rc-carousel-box">
+      <!-- Items start -->
+      <div class="rc-carousel-item">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/82b708d5db/shopify.svg" alt="shopify" />
+      </div>
+      <div class="rc-carousel-item">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/b75563ee5a/shopify-plus.svg" alt="shopify plus" />
+      </div>
+      <div class="rc-carousel-item">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/c07c101b92/woocommerce.svg" alt="woocommerce" />
+      </div>
+      <div class="rc-carousel-item">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/8a1255c93e/bigcommerce.svg" alt="bigcommerce" />
+      </div>
+      <div class="rc-carousel-item">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/7959054e28/salesforce.svg" alt="salesforce" />
+      </div>
+      <div class="rc-carousel-item">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/a6a0e2c3a1/magento.svg" alt="magento" />
+      </div>
+      <div class="rc-carousel-item">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/ab24f45c43/squarespace.svg" alt="squarespace" />
+      </div>
+      <div class="rc-carousel-item">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/792acd8fce/ebay.svg" alt="ebay" />
+      </div>
+      <div class="rc-carousel-item">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/6be94a6145/amazon.svg" alt="amazon" />
+      </div>
+      <!-- Items end -->
+      <!-- Duplicate items start, for infinite loop -->
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/82b708d5db/shopify.svg" alt="shopify" />
+      </div>
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/b75563ee5a/shopify-plus.svg" alt="shopify plus" />
+      </div>
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/c07c101b92/woocommerce.svg" alt="woocommerce" />
+      </div>
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/8a1255c93e/bigcommerce.svg" alt="bigcommerce" />
+      </div>
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/7959054e28/salesforce.svg" alt="salesforce" />
+      </div>
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/a6a0e2c3a1/magento.svg" alt="magento" />
+      </div>
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/ab24f45c43/squarespace.svg" alt="squarespace" />
+      </div>
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/792acd8fce/ebay.svg" alt="ebay" />
+      </div>
+      <div class="rc-carousel-item" aria-hidden="true">
+        <img class="rc-carousel-item-image" src="https://a.storyblok.com/f/79434/x/6be94a6145/amazon.svg" alt="amazon" />
+      </div>
+      <!-- Duplicate items end -->
+    </div>
+    <!-- Flexbox ends -->
+  </div>
+  <!-- rc-carousel-strip ends -->
+</div>
+<!-- rc-carousel wrapper ends -->
+
+
+        </section>
+
+        <section class="news-letter mt-4 mb-one-half" id="News-letter">
+          <div class="news ">
+            <div class="news-content">
+              <h1 class="news-heading">Subscribe To Get The Latest <br> News About Us</h1>
+              <p class="section-subtitle">Get the Latest news about this digital Marketing to Your Pocket, drop your <br> email below to
+                get weekly update about us</p>
+        
+              <form action="" class="form">
+                <input type="email" maxlength="50" required placeholder="Enter your email address">
+                <button class="bt">Subscribe</button>
+        
+              </form>
+            </div>
+          </div>
+        
+        </section>
+ <!-- Footer credits -->   
+        <div class="tag">
+                <p>Developer:::<a href="https://x.com/Iam__Yagami?s=09" target="_blank" rel="noopener noreferrer">Doli-Ttle</a></p>
+        </div>
+        
+        <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="dolittle" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+    
+        
+    </div>
+
+   
+    <script src="JS/script.js"></script>
+    <script src="JS/popScript.js"></script>
+    <script src="JS/typing.js"></script>
+</body>
+</html>
